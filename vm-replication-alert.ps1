@@ -6,7 +6,7 @@ $SMTPServer = new-object Net.Mail.SmtpClient($SMTPName, "587")
 $SMTPServer.EnableSsl = $true
 $SMTPServer.Credentials = New-Object System.Net.NetworkCredential($Username, $Password)
 $EmailMessage.From = $FromEmail
-$EmailMessage.To.Add($ToEmail01)
+$EmailMessage.To.Add($ToEmail)
 
 #Build a nice file name
 $date = Get-Date -Format M_d_yyyy_hh_mm_ss
